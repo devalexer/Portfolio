@@ -15,7 +15,7 @@ body {
 
 /*-----Header-----*/
 
-a {
+.flex-nav a {
   color: white;
   font-weight: 100;
   letter-spacing: 2px;
@@ -25,11 +25,9 @@ a {
   display: inline-block;
   width: 100%;
   text-align: center;
-  transition: all 0.5s;
-
 }
 
-a:hover {
+.flex-nav a:hover {
   background: rgba(0,0,0,0.3);
 }
 
@@ -37,7 +35,6 @@ a:hover {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0;
-
 }
 
 /*Affects Menu Box*/
@@ -100,6 +97,7 @@ a:hover {
 
 .nav-menu {
   display: block;
+  text-decoration: underline;
 }
 
 }
@@ -110,5 +108,30 @@ a:hover {
   width: 100%;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;  
+}
+
+.project {
+  flex-wrap: row;
+
+}
+
 /*-----Footer-----*/
 
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+}
+
+footer p {
+  flex: 4;
+}
+
+footer a {
+  flex: 1;
+}
