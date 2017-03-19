@@ -1,5 +1,7 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
 }
 
 *, *:before, *:after {
@@ -10,12 +12,37 @@ body {
   margin: 0;
   font-size: 20;
   font-family: sans-serif;
-  background-color: dimgray;
+  background-color: lightgrey;
 }
 
 /*-----Header-----*/
 
-.flex-nav a {
+header {
+  background-color: black;
+  height: 120px;
+}
+
+.nametag {
+  border: 1px solid white;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  padding: 8px;
+}
+
+.nametag h1 {
+  color: white;
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.nametag h2 {
+  color: gray;
+  margin-top: 0;
+  font-size: 12px;
+}
+
+nav a {
   color: white;
   font-weight: 100;
   letter-spacing: 2px;
@@ -27,11 +54,11 @@ body {
   text-align: center;
 }
 
-.flex-nav a:hover {
+nav a:hover {
   background: rgba(0,0,0,0.3);
 }
 
-.wrapper {
+.top-wrapper {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0;
@@ -39,42 +66,44 @@ body {
 
 /*Affects Menu Box*/
 
-.flex-nav ul{
+nav ul{
   display: flex;
   /*border: 1px solid black;*/
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  /*position: fixed;*/
+  position: relative;
+  right: 0px;
+  top: 0px;
 }
 
-.flex-nav li {
+nav li {
   flex: 3;
 }
 
-.flex-nav .social {
+nav .social {
   flex: 1;
 }
 
-.nav-menu {
+nav .nav-menu {
   display: none;
 }
 
 @media all and (max-width:1000px) {
   
-.flex-nav ul {
+nav ul {
   flex-wrap: wrap;
 }
 
-.flex-nav li {
+nav li {
   flex: 1 1 25%;
 }
 
-.flex-nav .social {
+nav .social {
   flex: 1 1 25%;
 }
 
-.nav-menu {
+nav .nav-menu {
   display: none;
 }
 
@@ -82,42 +111,96 @@ body {
 
 @media all and (max-width: 500px) {
  
-.flex-nav li {
+nav li {
   flex-basis: 100%;
 }
 
-.wrapper {
+.top-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.flex-nav {
+nav {
   order: -1;
 }
 
-.nav-menu {
+nav .nav-menu {
   display: block;
-  text-decoration: underline;
+}
+
+.project-section {
+  display:flex;
+  flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 }
 
 /*------Body------*/
 
-#background {
+/*#background {
   width: 100%;
+}*/
+
+.bioinfo {
+  width: 600px;
+  padding-left: 250px;
+  padding-right: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: rgba(0,0,0,0.6);
+}
+
+.biotitle {
+  color: white;
+}
+
+.biotext {
+  color: white;
 }
 
 main {
+  background-image: url("images/background.jpg");
+}
+
+.project-header {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  text-shadow: black 2px 2px;
+  padding: 15px;
+}
+
+.project-section {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  box-sizing: border-box;  
+  border: 1px solid yellow;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
-.project {
-  flex-wrap: row;
-
+.projects {
+  border: 1px solid deeppink;
+  text-decoration: none;
+  text-align: center;
+  max-width: 200px;
+  padding: 10px;
+  background-color: white;
 }
+
+.projects a {
+  border: 1px solid orange;
+  text-decoration: none;
+  color: black;
+  max-width:100%;
+}
+
 
 /*-----Footer-----*/
 
@@ -125,13 +208,17 @@ footer {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-
+  align-items: center;
+  background-color: black;
+  padding: 10px;
 }
 
 footer p {
-  flex: 4;
+  flex: 5;
+  color: white;
 }
 
 footer a {
   flex: 1;
+  color: white;
 }
