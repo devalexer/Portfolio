@@ -42,6 +42,15 @@ header {
   font-size: 12px;
 }
 
+/*------Body------*/
+
+main {
+  background-image: url("images/background.jpg");
+  background-size: cover;
+}
+
+/*Affects Navigation Bar*/
+
 nav a {
   color: white;
   font-weight: 100;
@@ -59,16 +68,12 @@ nav a:hover {
 }
 
 .top-wrapper {
-  max-width: 1000px;
   margin: 0 auto;
   padding: 0;
 }
 
-/*Affects Menu Box*/
-
 nav ul{
   display: flex;
-  /*border: 1px solid black;*/
   list-style: none;
   margin: 0 auto;
   padding: 0;
@@ -88,6 +93,85 @@ nav .social {
 nav .nav-menu {
   display: none;
 }
+
+/*Affects Bio Box*/
+
+.bioinfo {
+  width: 600px;
+  padding-left: 250px;
+  padding-right: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: rgba(0,0,0,0.6);
+}
+
+.biotitle {
+  color: white;
+}
+
+.biotext {
+  color: white;
+}
+
+/*Affects Project Section*/
+
+.project-header {
+  text-align: center;
+  color: darkorange;
+  font-size: 18px;
+  text-shadow: black 2px 2px;
+  padding: 15px;
+}
+
+.project-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid yellow;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.projects {
+  text-decoration: none;
+  text-align: center;
+  max-width: 200px;
+  padding: 10px;
+  background-color: white;
+}
+
+.projects img {
+  border: 1px solid orange;
+  text-decoration: none;
+  color: black;
+      max-width:100%; 
+      margin:auto;
+      display:block;
+}
+
+/*-----Footer-----*/
+
+footer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
+}
+
+footer p {
+  flex: 5;
+  color: white;
+}
+
+footer a {
+  flex: 1;
+  color: white;
+}
+
+/*Affects responsivity between 500px and 1000px (tablets)*/
 
 @media all and (max-width:1000px) {
   
@@ -109,6 +193,8 @@ nav .nav-menu {
 
 }
 
+/*Affects responsivity up to 500px (mobiles)*/
+
 @media all and (max-width: 500px) {
  
 nav li {
@@ -128,97 +214,31 @@ nav .nav-menu {
   display: block;
 }
 
+.bioinfo {
+  padding: 0, 0, 0, 0;
+}
+
 .project-section {
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding-left: 0;
   padding-right: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  /* TODO: Get project divs to fit to sides in mobile view*/
+  /* TODO: Ensure project divs don't touch in mobile & tablet view*/
 }
-
-}
-
-/*------Body------*/
-
-/*#background {
-  width: 100%;
-}*/
-
-.bioinfo {
-  width: 600px;
-  padding-left: 250px;
-  padding-right: 30px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background: rgba(0,0,0,0.6);
-}
-
-.biotitle {
-  color: white;
-}
-
-.biotext {
-  color: white;
-}
-
-main {
-  background-image: url("images/background.jpg");
-}
-
-.project-header {
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  text-shadow: black 2px 2px;
-  padding: 15px;
-}
-
-.project-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid yellow;
-  text-align: center;
-  padding-bottom: 50px;
-  padding-left: 250px;
-  padding-right: 250px;
-}
-
-.projects {
-  border: 1px solid deeppink;
-  text-decoration: none;
-  text-align: center;
-  max-width: 200px;
-  padding: 10px;
-  background-color: white;
-}
-
-.projects a {
-  border: 1px solid orange;
-  text-decoration: none;
-  color: black;
-  max-width:100%;
-}
-
-
-/*-----Footer-----*/
 
 footer {
   display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  align-items: center;
-  background-color: black;
-  padding: 10px;
-}
-
-footer p {
-  flex: 5;
-  color: white;
+  flex-direction: column;
+  flex: 1;
+  /* TODO: Get elements to wrap into column in mobile view*/
 }
 
 footer a {
-  flex: 1;
-  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
 }
