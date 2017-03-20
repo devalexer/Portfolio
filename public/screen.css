@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   font-size: 20;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: lightgrey;
 }
 
@@ -51,12 +51,19 @@ main {
 
 /*Affects Navigation Bar*/
 
+.top-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 nav a {
   color: white;
-  font-weight: 100;
+  font-weight: bold;
   letter-spacing: 2px;
   text-decoration: none;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.3);
+  text-shadow: black 2px 2px;
   padding: 20px 5px;
   display: inline-block;
   width: 100%;
@@ -64,12 +71,7 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(0,0,0,0.3);
-}
-
-.top-wrapper {
-  margin: 0 auto;
-  padding: 0;
+  background: rgba(0,0,0,0.5);
 }
 
 nav ul{
@@ -97,28 +99,32 @@ nav .nav-menu {
 /*Affects Bio Box*/
 
 .bioinfo {
-  width: 600px;
-  padding-left: 250px;
-  padding-right: 30px;
+  max-width: 600px;
+  padding-left: 225px;
+  padding-right: 50px;
   padding-top: 100px;
   padding-bottom: 100px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
 }
 
 .biotitle {
   color: white;
+  font-size: 30px;
+  text-shadow: black 2px 2px;
 }
 
 .biotext {
   color: white;
+  font-weight: light;
 }
 
 /*Affects Project Section*/
 
 .project-header {
   text-align: center;
-  color: darkorange;
-  font-size: 18px;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  font-size: 22px;
   text-shadow: black 2px 2px;
   padding: 15px;
 }
@@ -127,7 +133,6 @@ nav .nav-menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid yellow;
   text-align: center;
   padding-bottom: 50px;
   padding-left: 250px;
@@ -215,30 +220,22 @@ nav .nav-menu {
 }
 
 .bioinfo {
-  padding: 0, 0, 0, 0;
+  padding: 20px;
 }
 
 .project-section {
   display: flex;
   flex-direction: column;
-  padding-left: 0;
-  padding-right: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  /* TODO: Get project divs to fit to sides in mobile view*/
-  /* TODO: Ensure project divs don't touch in mobile & tablet view*/
+  /* TO-DO: Get project divs to fit to sides in mobile view*/
+  /* TO-DO: Ensure project divs don't touch in mobile & tablet view*/
 }
 
 footer {
-  display: flex;
   flex-direction: column;
-  flex: 1;
-  /* TODO: Get elements to wrap into column in mobile view*/
-}
-
-footer a {
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  /* TO-DO: Get social icons to wrap into row within column in mobile view*/
 }
 
 }
